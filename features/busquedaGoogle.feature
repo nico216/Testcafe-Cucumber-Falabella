@@ -8,7 +8,12 @@ Feature: Busqueda en Google
         Given que navego a google
         When ingreso en campo de busqueda la palabra "falabella"
         And presiono el boton buscar 
-        Then google me redirige a la pagina de resultados mostrando en las opciones el texto "Herramientas"
         And hago clic en el resultado que contiene la palabra "Falabella.com - Mejor Compra Online"
-        Then google me derigire a www.falabella.com que contiene el texto "VENTA TELEFÓNICA"
-        And ingreso en el campo de busqueda la palabra "PS4" y presiono la tecla Enter
+        Then ingreso en el campo de busqueda la palabra "PS4" y presiono la tecla Enter
+        And hago clic en el producto que dice "PlayStation 4 VR Worlds Bundle"
+        And presiono boton Agregar a la Bolsa de Compras
+        And presiono boton Ver Bolsa de Compras
+        Then aumento la cantidad del producto a dos unidades
+        And selecciono ganantia "2 Años $ 49.190"
+        And presiono boton comprar
+        
