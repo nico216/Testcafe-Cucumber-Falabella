@@ -9,13 +9,5 @@ exports.BusquedaGoogle = {
     },
     linkFalabella: function(criterioDeBusqueda) {
         return Selector('#rso').with({ boundTestRun: testController }).find('a').find('h3').withText(criterioDeBusqueda)        
-    },
-   /*campoMensaje: function() {
-        return Selector('#hdtb-tls').with({ boundTestRun: testController })
-    },
-    mensajeConfirmacion: function() {
-        return Selector('#desktop-true').with({ boundTestRun: testController })
-    }    */
+    }
 }
-
-
