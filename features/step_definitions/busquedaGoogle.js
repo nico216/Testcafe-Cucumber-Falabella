@@ -32,14 +32,11 @@ Then('hago clic en el producto que dice {string}', async function (seleccionarPr
 Then('presiono boton Agregar a la Bolsa de Compras', async function () {
     await testController.click(paginaDetalleProducto.detalleProducto.botonAgregarBolsa())
 });
-Then('presiono boton Ver Bolsa de Compras', async function () {
-    const btnBolsa = Selector('#header > nav > div.fb-masthead__util-bar > div > div.fb-masthead__util-bar__util-wrapper > div.fb-masthead-item__main.fb-masthead-basket')  
-    const btnBolsa2 = Selector('#header > nav > div.fb-masthead__util-bar > div > div.fb-masthead__util-bar__util-wrapper > div.fb-masthead-item__main.fb-masthead-basket')   
-    
+Then('presiono boton Ver Bolsa de Compras', async function () {    
     await testController
         .wait(2000)
-        .click(btnBolsa)
-        .click(btnBolsa2)
+        .click(paginaDetalleProducto.detalleProducto.btnBolsa())
+        .click(paginaDetalleProducto.detalleProducto.btnBolsa())
     /*.setNativeDialogHandler(() => true)
     .click(paginaDetalleProducto.detalleProducto.botonVerBolsa())*/
 });
